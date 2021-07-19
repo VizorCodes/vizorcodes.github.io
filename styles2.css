@@ -1,0 +1,94 @@
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: #333546;
+}
+
+.container {
+    text-transform: capitalize;
+    width: 100%;
+    height: 130px;
+    background: #2f3141;
+}
+
+.menu ul {
+      display: inline-flex;
+      margin: 50px;
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    color: #b2b1b1;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.false:hover {
+    border-bottom: 1px solid black;
+
+}
+
+.menu ul li a {
+    color: #b2b1b1;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.menu ul li a:hover {
+    color: #6d6d6d;
+}
+
+.logo img {
+    width: 130px;
+    margin-top: -25px;
+    margin-right: 48px;
+    margin-left: -80px;
+}
+
+.menu .active {
+    color: #19dafa;
+}
+
+.content-container {
+    width: 100%;
+    height: 663px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.content-container .box{
+    background: rgb(160, 160, 160);
+    position: relative;
+    width: 343.66px;
+    height: 348px;
+    margin: 6px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.content-container .box .imgBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-container .box .imgBox img {
+    max-width: 100%;
+    height: 348px;
+    max-height: 348px;
+    transition: transform 2s;
+}
+
+.content-container .box:hover .imgBox img {
+    opacity: 0.8;
+    transition: 0.8s;
+}
