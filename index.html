@@ -4,10 +4,20 @@
         <meta charset="UTF-8">
         <title>Background Animation Effects</title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <section></section>
         <script>
+
+            const colors = [
+                '#2196f3',
+                '#e91e63',
+                '#ffeb3b',
+                '#74ff1d',
+            ]
+
+
             function createSquare(){
                 const section = document.querySelector('section');
                 const square = document.createElement('span');
@@ -20,13 +30,16 @@
                 square.style.top = Math.random() * innerHeight + 'px';
                 square.style.left = Math.random() * innerWidth + 'px';
 
-                section.appendChild(square)
+                const bg = colors[Math.floor(Math.random() * colors.length)];
+                square.style.background = bg;
+
+                section.appendChild(square);
 
                 setTimeout(() =>{
                     square.remove()
                 },5000)
             }
-            setInterval(createSquare, 150)
+            setInterval(createSquare , 150)
         </script>
     </body>
 </html>
